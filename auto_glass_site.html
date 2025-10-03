@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Установка автостекла</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #1f1f1f;
+      color: #e0e0e0;
+    }
+    header {
+      position: relative;
+      height: 450px;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/mnt/data/4cc2e12b-6d06-4cd8-853f-f8fa50da390e.png') center/cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+      padding: 40px 60px;
+    }
+    header h1 {
+      font-size: 42px;
+      margin: 0 0 10px 0;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+    }
+    header p {
+      font-size: 18px;
+      margin: 0 0 20px 0;
+    }
+    nav {
+      margin-top: 15px;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #e0e0e0;
+      text-decoration: none;
+      font-weight: bold;
+      background: rgba(50,50,50,0.6);
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: background 0.3s;
+    }
+    nav a:hover { background: #444; }
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 150px;
+    }
+    .lang-switch button {
+      margin-left: 5px;
+      padding: 6px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      background: rgba(50,50,50,0.6);
+      color: #e0e0e0;
+      transition: background 0.3s;
+    }
+    .lang-switch button:hover { background: #444; }
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section h2 { color: #ffda44; margin-bottom: 20px; }
+    .btn {
+      display: inline-block;
+      margin: 10px 5px;
+      padding: 12px 20px;
+      background: #444;
+      color: #e0e0e0;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #222; }
+    .services, .why-us {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #2b2b2b;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+    footer {
+      background: #111;
+      color: #e0e0e0;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    footer a { color: #ffda44; text-decoration: none; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">Установка автостекла в Киеве</h1>
+    <p>Продажа, монтаж и доставка по Украине</p>
+    <div class="lang-switch">
+      <button onclick="setLang('ru')">Рус</button>
+      <button onclick="setLang('uk')">Укр</button>
+    </div>
+    <nav>
+      <a href="#catalog" id="menu-catalog">Подбор стекла</a>
+      <a href="#services" id="menu-services">Услуги</a>
+      <a href="#contacts" id="menu-contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <section id="catalog" class="section">
+    <h2 id="catalog-title">Подбор стекла</h2>
+    <p id="catalog-text">Каталога нет? Не проблема! Просто позвоните или напишите нам — менеджер подберет стекло для вашего автомобиля.</p>
+    <a class="btn" id="btn-call" href="tel:+380000000000">Позвонить менеджеру</a>
+    <a class="btn" id="btn-telegram" href="https://t.me/" target="_blank">Написать в Telegram</a>
+    <a class="btn" id="btn-viber" href="viber://chat?number=%2B380000000000" target="_blank">Написать в Viber</a>
+  </section>
+
+  <section id="services" class="section">
+    <h2 id="services-title">Наши услуги</h2>
+    <div class="services">
+      <div class="card" id="service1">Продажа автостёкол для легковых авто</div>
+      <div class="card" id="service2">Профессиональная установка автостёкол</div>
+      <div class="card" id="service3">Отправка по Украине: Новая Почта и SAT</div>
+      <div class="card" id="service4">Установка и самовывоз в Киеве (по договоренности)</div>
+    </div>
+  </section>
+
+  <section id="why" class="section">
+    <h2 id="why-title">Почему выбирают нас?</h2>
+    <div class="why-us">
+      <div class="card" id="why1">✔ Большой выбор стёкол</div>
+      <div class="card" id="why2">✔ Быстрая установка</div>
+      <div class="card" id="why3">✔ Работаем по всей Украине</div>
+      <div class="card" id="why4">✔ Пн–Сб, удобный график</div>
+    </div>
+  </section>
+
+  <section id="contacts" class="section">
+    <h2 id="contacts-title">Контакты</h2>
+    <p><b id="phone-label">Телефон:</b> <a href="tel:+380000000000">+38 (000) 000-00-00</a></p>
+    <p><b id="address-label">Адрес:</b> Киев (установка и самовывоз по договоренности)</p>
+    <p><b id="messengers-label">Мессенджеры:</b></p>
+    <a class="btn" href="https://t.me/" target="_blank">Telegram</a>
+    <a class="btn" href="viber://chat?number=%2B380000000000" target="_blank">Viber</a>
+    <a class="btn" href="https://wa.me/380000000000" target="_blank">WhatsApp</a>
+  </section>
+
+  <footer>
+    © 2025 <span id="footer-text">Установка автостекла. Все права защищены.</span>
+  </footer>
+
+  <script>
+    const langData = {
+      ru: {
+        title: "Установка автостекла",
+        "menu-catalog": "Подбор стекла",
+        "menu-services": "Услуги",
+        "menu-contacts": "Контакты",
+        "catalog-title": "Подбор стекла",
+        "catalog-text": "Каталога нет? Не проблема! Просто позвоните или напишите нам — менеджер подберет стекло для вашего автомобиля.",
+        "btn-call": "Позвонить менеджеру",
+        "btn-telegram": "Написать в Telegram",
+        "btn-viber": "Написать в Viber",
+        "services-title": "Наши услуги",
+        service1: "Продажа автостёкол для легковых авто",
+        service2: "Профессиональная установка автостёкол",
+        service3: "Отправка по Украине: Новая Почта и SAT",
+        service4: "Установка и самовывоз в Киеве (по договоренности)",
+        "why-title": "Почему выбирают нас?",
+        why1: "✔ Большой выбор стёкол",
+        why2: "✔ Быстрая установка",
+        why3: "✔ Работаем по всей Украине",
+        why4: "✔ Пн–Сб, удобный график",
+        "contacts-title": "Контакты",
+        "phone-label": "Телефон:",
+        "address-label": "Адрес:",
+        "messengers-label": "Мессенджеры:",
+        "footer-text": "Установка автостекла. Все права защищены."
+      },
+      uk: {
+        title: "Встановлення автоскла",
+        "menu-catalog": "Підбір скла",
+        "menu-services": "Послуги",
+        "menu-contacts": "Контакти",
+        "catalog-title": "Підбір скла",
+        "catalog-text": "Каталогу немає? Не проблема! Просто зателефонуйте або напишіть нам — менеджер підбере скло для вашого авто.",
+        "btn-call": "Зателефонувати менеджеру",
+        "btn-telegram": "Написати в Telegram",
+        "btn-viber": "Написати у Viber",
+        "services-title": "Наші послуги",
+        service1: "Продаж автоскла для легкових авто",
+        service2: "Професійне встановлення автоскла",
+        service3: "Відправка по Україні: Нова Пошта та SAT",
+        service4: "Встановлення та самовивіз у Києві (за домовленістю)",
+        "why-title": "Чому обирають нас?",
+        why1: "✔ Великий вибір скла",
+        why2: "✔ Швидке встановлення",
+        why3: "✔ Працюємо по всій Україні",
+        why4: "✔ Пн–Сб, зручний графік",
+        "contacts-title": "Контакти",
+        "phone-label": "Телефон:",
+        "address-label": "Адреса:",
+        "messengers-label": "Месенджери:",
+        "footer-text": "Встановлення автоскла. Всі права захищено."
+      }
+    };
+
+    function setLang(lang) {
+      for (const id in langData[lang]) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = langData[lang][id];
+      }
+    }
+
+    setLang('ru');
+  </script>
+</body>
+</html>
